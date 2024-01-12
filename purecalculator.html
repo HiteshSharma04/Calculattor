@@ -1,0 +1,84 @@
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title> 
+</head> 
+<body> 
+    <div style="border-radius: 20px; border: 1px solid blue; box-shadow: 1px 1px 1px 1px skyblue; width: 300px; text-align: center; margin-left: 480px; margin-top: 130px;">
+ 
+ 
+    <h1>Calculator</h1> 
+ 
+    <input type="text" name="" id="inp" placeholder="Enter value" style="width: 220px; padding: 5px; box-shadow: gray; " readonly > 
+ 
+    <hr style="width: 300px;"> 
+    <button onclick="number(7)" style="padding: 10px;width: 50px; box-shadow: gray;">7</button> 
+    <button onclick="number(8)" style="padding: 10px;width: 50px; box-shadow: gray;">8</button> 
+    <button onclick="number(9)" style="padding: 10px;width: 50px; box-shadow: gray;">9</button> <button onclick="opp('*')" style="padding: 10px;width: 50px; box-shadow: gray;">*</button><br>
+    <button onclick="number(4)" style="padding: 10px;width: 50px; box-shadow: gray;">4</button> 
+    <button onclick="number(5)" style="padding: 10px;width: 50px; box-shadow: gray;">5</button> 
+    <!-- <button onclick="number(5)" style="padding: 10px;width: 50px; box-shadow: gray;">5</button>  -->
+    <button onclick="number(6)" style="padding: 10px;width: 50px; box-shadow: gray;">6</button> <button onclick="opp('/')" style="padding: 10px;width: 50px; box-shadow: gray;">/</button><br>
+    <button onclick="number(1)" style="padding: 10px;width: 50px; box-shadow: gray;">1</button> 
+    <button onclick="number(2)" style="padding: 10px;width: 50px; box-shadow: gray;">2</button> 
+    <button onclick="number(3)" style="padding: 10px;width: 50px; box-shadow: gray;">3</button> <button onclick="opp('-')" style="padding: 10px;width: 50px; box-shadow: gray;">-</button><br>
+     
+    
+    <button onclick="number(0)" style="padding: 10px;width: 75px; box-shadow: gray;">0</button>
+    <button onclick="opp('+')" style="padding: 10px;width: 80px; box-shadow: gray;">+</button>   <button onclick="opp('%')" style="padding: 10px;width: 50px; box-shadow: gray;">%</button> 
+    <br><br> 
+    
+    <button onclick="cal()" style="padding: 15px;width: 160px; box-shadow: gray;">Calculate</button><button onclick="clearLastEntry()" style="padding: 15px;width: 50px; box-shadow: gray;">X</button> <br><br>
+</div>
+</body> 
+<style>
+    body{
+        background-image: url(https://th.bing.com/th/id/R.b7bd279ae0ff64f661ab81e6a99e0443?rik=qn5nDpSzCi6Fuw&riu=http%3A%2F%2Fcfgmerchantsolutions.com%2Fwp-content%2Fuploads%2F2016%2F07%2Fbigstock-A-close-up-shot-of-a-calculato-85584314.jpg&ehk=3acehu0LrmDP87hEvyHmYY4eY1Kjadjh5ZhA6Dwe9EA%3D&risl=&pid=ImgRaw&r=0);
+    }
+    h1{
+        background: linear-gradient(to right, orange, yellow, green, indigo, violet,gold, purple);
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+    }
+    button{
+        border-radius: 5px;
+
+    }
+    button:hover{
+        background-color: skyblue;
+        color: green;
+    }
+    input{
+        border-radius: 5px;
+    }
+
+</style>
+ 
+<script> 
+function number(a){ 
+document.getElementById("inp").value += a  
+} 
+ 
+ 
+ 
+function opp(b){ 
+document.getElementById("inp").value += b; 
+} 
+ 
+ 
+ 
+function cal(){ 
+    let inp = document.getElementById("inp"); 
+    let result =  eval(inp.value); 
+    inp.value = result 
+} 
+ 
+function clearLastEntry() {
+            let inp = document.getElementById("inp");
+            inp.value = inp.value.slice(0, -1);
+        } 
+ 
+</script> 
+</html>
